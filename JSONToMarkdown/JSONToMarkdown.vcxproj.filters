@@ -27,6 +27,21 @@
     <ClInclude Include="base.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="JSONRoot.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="JSONObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="JSONFiled.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MDHeader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="jsonUtil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -36,6 +51,21 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Encoding.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="JSONRoot.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="JSONObject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="JSONFiled.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MDHeader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="jsonUtil.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

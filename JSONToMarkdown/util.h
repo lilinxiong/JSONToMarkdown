@@ -1,22 +1,18 @@
-#pragma once
-#ifndef UTIL_H_
-#define UTIL_H_
-#include <string>
-#include <vector>
-#include <iostream>
+﻿#pragma once
+#ifndef GNOIX_INL_UTIL_H_
+#define GNOIX_INL_UTIL_H_
 #include <algorithm>
 #include "base.h"
 namespace gnoixinl {
 
-    std::string readFile(const char* filePath);
+	std::string readFile(const char* filePath, std::ios_base::open_mode openMode = std::ios_base::in);
 
-    void writeFile(const char* filePath);
+	template <typename T>
+	int writeFile(const char* filePath, T t, std::ios_base::open_mode openMode = std::ios_base::out);
 
     std::string join(const std::string& base, const std::string& path);
 
-    void glob(std::string pattern, std::vector<std::string>& result, bool recursive = false);
-
-    static bool isDir(const std::string& path, DIR* dir);
+    void glob(const std::string& pattern, std::vector<std::string>& result, bool recursive = false);
 
     static inline bool isPathSeparator(char c);
 
@@ -24,5 +20,5 @@ namespace gnoixinl {
 
     std::string getAnsiFileName(const std::string& ansi_filePath, bool withExtension = true);
 }
-#endif // !UTIL_H_
+#endif // !GNOIX_INL_UTIL_H_
 
