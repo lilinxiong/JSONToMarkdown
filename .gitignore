@@ -338,3 +338,5 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/JSONToMarkdown/init_arguments.md
+/JSONToMarkdown/init_arguments.json

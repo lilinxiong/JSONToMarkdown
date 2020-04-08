@@ -20,6 +20,21 @@ struct JSONObjectStruct
 		return os;
 	}
 };
+struct MarkDownTable
+{
+	int idx = 0;
+	std::string tableName;
+	JSONObjectStruct jsonObject;
+	MarkDownTable(int mIdx, const std::string &mTableName, const JSONObjectStruct& mJsonObjectStruct) :
+		idx(mIdx), tableName(mTableName), jsonObject(mJsonObjectStruct)
+	{ };
+
+	friend std::ostream& operator<<(std::ostream & os, const MarkDownTable& markdownTable)
+	{
+		os << markdownTable.jsonObject << std::endl;
+		return os;
+	}
+};
 class JSONObject
 {
 public:
@@ -29,7 +44,8 @@ public:
 private:
 	int parseObject(const json &obj, const std::string &key);
 private:
-	std::map<std::string, JSONObjectStruct> mapsJsonObjectStruct;
+	int mIdx = 0;
+	std::vector<MarkDownTable> vecMarkdownTable;
 	json root;
 };
 

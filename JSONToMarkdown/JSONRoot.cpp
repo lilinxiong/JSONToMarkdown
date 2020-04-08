@@ -24,7 +24,6 @@ std::ostream & operator<<(std::ostream & os, JSONRoot& jsonRoot)
 {
 	// TODO: 在此处插入 return 语句
 	const JSONObject* obj = jsonRoot.objJsonObject;
-
 	os << *obj << std::endl;
 	return os;
 }
